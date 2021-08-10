@@ -4,6 +4,7 @@ import ErrorModel from "../UI/error-model/error-model.component";
 import Card from '../UI/card/card';
 
 import './add-user.style.css';
+import Wrapper from "../helper/wrapper.component";
 const AddUser = props =>{
     const [enteredUsername,setEnteredUsername]=useState('');
     const [enteredAge,setEnteredAge]=useState('');
@@ -41,7 +42,7 @@ const AddUser = props =>{
     }
 
     return(
-        <div>
+        <Wrapper>
         {error && (<ErrorModel 
         title={error.title} 
         message={error.message} 
@@ -60,7 +61,7 @@ const AddUser = props =>{
            </Button>
         </form>
     </Card>
-    </div>
+    </Wrapper>
     )
 };
 
